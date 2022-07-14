@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wumpus game</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b51d5e4e6a.js" crossorigin="anonymous"></script>
+     <script>
+        environment_rows = 5;
+        environment_columns = 5;
+
+     </script>
+</head>
+
+<body>
+    <div id="header">
+        <marquee SCROLLAMOUNT = 6><p>Wumpus World Autonomous Bot</p></marquee>
+    </div>
+    <div class="row">
+        <div id="runner">
+        <p id="define"  onclick="run(this.id)">Define start point:</p>
+        
+        <div id="speedcontrol">
+            <i class="fa fa-minus" aria-hidden="true"></i>
+            <input type="range" id="speed" name="speed"
+                min=".10" max="50">
+            <label for="volume"></label>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <label>speed</label>
+        </div>
+        <table id="main_table">
+            
+            <script>
+                for (var i = 0; i < environment_rows; i++) {
+                    document.write("<tr>");
+                    for (var j = 0; j < environment_columns; j++) {
+                        document.write("<td class='main_td' id='"+i.toString()+j.toString()+"' onclick='onClick(this.id)'>");
+                        document.write("</td>")
+                    }
+                    document.write("</tr>");
+                }
+            </script>
+        </table>
+        <p id="shortest_path"  onclick="startPlay()"></p>
+        <p id="index" ></p>
+        <label >Enter number of Episodes</label>
+        <input type="text" id="episodes" name="episodes" value="50">
+        
+        </div>
+
+        <!-- isha code -->
+        <article id="q_table" >
+
+            <p style="text-align: center; font-weight: bold; margin: 0;">Q(State, Action)</p>
+            <article style="display: flex; margin-bottom: 5px;">
+                <div>
+                    <p style="text-align: center;">UP</p>
+                    <table>
+                        <script>
+                            for (var i = 0; i < environment_rows; i++) {
+                                document.write("<tr>");
+                                for (var j = 0; j < environment_columns; j++) {
+                                    document.write("<td class='side_td' id='t"+i.toString()+j.toString()+"0'>0")
+                                    document.write("</td>")
+                                }
+                                document.write("</tr>");
+                            }
+                        </script>
+                    </table>
+                </div>
+                <span style="width: 5px;"></span>
+                <div>
+                    <p style="text-align: center;">DOWN</p>
+                    <table>
+                        <script>
+                            for (var i = 0; i < environment_rows; i++) {
+                                document.write("<tr>");
+                                for (var j = 0; j < environment_columns; j++) {
+                                    document.write("<td class='side_td' id='t"+i.toString()+j.toString()+"2'>0")
+                                    document.write("</td>")
+                                }
+                                document.write("</tr>");
+                            }
+                        </script>
+                    </table>
+                </div>
+            </article>
+            <article style="display: flex;">
+                <div>
+                    <table>
+                        <script>
+                            for (var i = 0; i < environment_rows; i++) {
+                                document.write("<tr>");
+                                for (var j = 0; j < environment_columns; j++) {
+                                    document.write("<td class='side_td' id='t"+i.toString()+j.toString()+"3'>0")
+                                    document.write("</td>")
+                                }
+                                document.write("</tr>");
+                            }
+                        </script>
+                    </table>
+                    <p style="text-align: center;">LEFT</p>
+                </div>
+                <span style="width: 5px;"></span>
+                <div>
+                    <table>
+                        <script>
+                            for (var i = 0; i < environment_rows; i++) {
+                                document.write("<tr>");
+                                for (var j = 0; j < environment_columns; j++) {
+                                    document.write("<td class='side_td' id='t"+i.toString()+j.toString()+"1'>0")
+                                    document.write("</td>")
+                                }
+                                document.write("</tr>");
+                            }
+                        </script>
+                    </table>
+                    <p style="text-align: center;">RIGHT</p>
+                </div>
+            </article>
+
+        </article>
+</div>
+    <!-- end of isha's code -->
+    <script src="script.js"></script>
+</body>
+
+</html>

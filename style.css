@@ -1,0 +1,162 @@
+body{
+    background: rgb(243, 243, 247);
+    display: inline;
+    width: 100%;
+}
+
+#header{
+    color:rgb(68, 10, 134);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+    
+
+ #runner{
+    background-color: rgb(168, 171, 202);
+    padding:20px;
+
+    width: max-content;
+    display:flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    -webkit-box-shadow: -5px 10px 83px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -5px 10px 83px 0px rgba(0,0,0,0.75);
+box-shadow: -5px 10px 83px 0px rgba(0,0,0,0.75);
+border-radius: 22px 22px 22px 46px;
+-moz-border-radius: 22px 22px 22px 46px;
+-webkit-border-radius: 22px 22px 22px 46px;
+border: 0px solid #000000;
+}
+
+#runner td:hover{
+border-color: #000000;
+border-radius: none;
+background-color:  rgb(168, 171, 202);
+}
+/* for isha's html */
+
+ #q_table{
+    
+    background-color: rgb(168, 171, 202);
+    position: fixed; 
+    top: 50%; 
+    left: 10%; 
+    width:fit-content;
+    padding:20px;
+    transform: translate(0, -50%);
+    border-radius: 79px 24px 79px 24px;
+    -moz-border-radius: 79px 24px 79px 24px;
+    -webkit-border-radius: 79px 24px 79px 24px;
+    border: 0px solid #000000;
+    animation: fading 2s;
+}
+@keyframes fading {
+    0%{ border-radius: 5px;
+        -webkit-box-shadow: -5px 10px 83px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 10px 83px 0px rgba(0,0,0,0.75);
+    box-shadow: -5px 10px 83px 0px rgba(0,0,0,0.75);}
+    50%{
+        -webkit-box-shadow: 3px 2px 25px 0px rgba(40,46,51,1);
+        -moz-box-shadow: 3px 2px 25px 0px rgba(40,46,51,1);
+        box-shadow: 3px 2px 25px 0px rgba(40,46,51,1);
+    }
+    100%{
+        box-shadow: none;
+    }
+
+    
+}
+#q_table:hover{
+    -webkit-box-shadow: 3px 2px 25px 0px rgba(40,46,51,1);
+    -moz-box-shadow: 3px 2px 25px 0px rgba(40,46,51,1);
+    box-shadow: 3px 2px 25px 0px rgba(40,46,51,1);
+}
+
+#runner p{
+    background: #2458eb;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 4px;
+    color: white;
+    
+    font-size: 20px;
+}
+
+#runner p #shortest_path{
+    text-align: center;
+    cursor:pointer;
+    color:black;
+}
+#runner p #shortest_path:hover{
+  background-color: black;
+}
+#runner p #define{
+    text-align: center;
+}
+#runner input{
+    position: relative;
+    width: 150px;
+}
+#runner #speedcontrol{
+    position: relative;
+    text-align: center;
+}
+#runner #speedcontrol label{
+    color:rgb(37, 37, 85);
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+#runner #speedcontrol label:hover{
+    color:blue;
+}
+#main_table {
+    margin:10px 20px;
+    background: rgb(255, 255, 254);
+    border-radius: 15px;
+}
+
+.main_td {
+    position: relative;
+    border: 1px solid green;
+    border-radius: 0.5rem;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+.main_td .fa-robot{
+    font-size: 30px;
+}
+.side_td {
+    position: relative;
+    border: 1px solid blue;
+    border-radius: 0.5rem;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    
+    
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#reset{
+    border:1px solid blue;
+
+    width: max-content;
+    position: fixed;
+    left: 75%;
+    padding: 3px;
+    text-transform: capitalize;
+}
+#reset:hover{
+    color:red;
+}
