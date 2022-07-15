@@ -101,6 +101,7 @@ async function run(id) {
         show_ele('q_table')
         delay_hide(id);
         show_toast();
+        document.body.style.backgroundImage='none';
         for (var i = 0; i < q_values.length; i++) {
             q_values[i] = new Array(environment_columns);
         }
