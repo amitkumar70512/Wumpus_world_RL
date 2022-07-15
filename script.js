@@ -100,6 +100,8 @@ async function run(id) {
         rewards[goal[0]][goal[1]] = 100;
         show_ele('q_table')
         delay_hide(id);
+        episodes = prompt("Please enter number of Episodes:",
+                "500");
         show_toast();
         document.body.style.backgroundImage='none';
         for (var i = 0; i < q_values.length; i++) {
