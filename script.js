@@ -247,7 +247,7 @@ function onClick(id) {
     } else if (flag == 4){
         wall.push(parseInt(parseInt(id) / 10));
         wall.push(parseInt(parseInt(id) % 10));
-        document.getElementById(id).innerHTML='<img src="media/wumpus.png" alt="" width="50" height="50">'; // here png is used, git dont support gif
+        document.getElementById(id).innerHTML='<img src="media/ghost.gif" alt="" width="50" height="50">'; 
         document.getElementById(id).setAttribute("style", "background-color: black ;color:white");
         document.getElementById("define").innerHTML = 'Define goal point:';
         flag += 1;
